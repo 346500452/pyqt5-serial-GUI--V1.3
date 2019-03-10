@@ -122,7 +122,7 @@ class mainWindow(QMainWindow, Ui_Form):
             
             self.ser.open()
             #定时器开启，2ms
-            self.timer.start(10)
+            self.timer.start(2)
         except:
             QMessageBox.critical(self, '错误提示','打开串口失败!!!\r\n没有可用的串口或当前串口被占用')
             return None
@@ -219,7 +219,7 @@ class mainWindow(QMainWindow, Ui_Form):
                     #发送新行
                     if self.sendNewLineCheckBox.checkState():
                         data = data + '\r\n'
-                    data = data.encode('gbk')
+                    data = data.encode('utf-8')
                 #十六进制发送
                 else:
                     data = data.strip()     #删除前后空格
@@ -287,11 +287,9 @@ class mainWindow(QMainWindow, Ui_Form):
         if self.ser.isOpen():
             num = self.ser.inWaiting()            
             if num > 0:
-                print(num)
-                bytes = self.ser.read(self.ser.inWaiting() )
-                #bytes = self.ser.readline()
-                for i in range(0, len(bytes)):
-                    print(hex(bytes[i]))
+                bytes = self.ser.read(self.ser.inWaiting())
+                #根据实际接收的串口缓冲区数据长度，重新赋值，因为长度信息可能发生了更新
+				num = len(bytes)
                 #十六进制显示
                 if self.hexShowCheckBox.checkState():
                     showData = ''
@@ -299,26 +297,9 @@ class mainWindow(QMainWindow, Ui_Form):
                         showData = showData + '{:02x}'.format(bytes[i]) + ' '
                 else:
                     showData = ''
-#                    while len(bytes) > 1:
-#                        if bytes[0] < 0x7f:
-#                            showData += chr(bytes[0])
-#                            bytes = bytes[1:]
-#                        else:
-#                            try:
-#                                hanzi = bytes[:2].decode('gbk')#GB18030
-#                                showData += hanzi
-#                                bytes = bytes[2:]
-#                            except Exception as e:
-#                                showData += '{:02x}'.format(bytes[0])#'\\x%02X' % int(bytes[0])
-#                                bytes = bytes[1:]
-#                    if len(bytes) > 0:
-#                        if bytes[0] < 0x7f:
-#                            showData += chr(bytes[0])
-#                            bytes = bytes[1:]
                     try:
                         showData = bytes.decode('utf-8')
-                        print(showData)
-                        #showData = unicode(QtCore.QString(data)).decode('utf-8')
+                        #print(showData)
                     except:
                         print("编码出错")
                         for i in range(0, len(bytes)):
