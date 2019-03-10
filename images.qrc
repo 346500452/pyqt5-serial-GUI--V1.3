@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="/Add Prefix">
+    <file>images/cartoon.ico</file>
+  </qresource>
+</RCC>
