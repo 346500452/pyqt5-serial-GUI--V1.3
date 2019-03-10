@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>712</width>
-    <height>545</height>
+    <width>737</width>
+    <height>567</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,7 +21,7 @@
     <rect>
      <x>510</x>
      <y>20</y>
-     <width>191</width>
+     <width>221</width>
      <height>331</height>
     </rect>
    </property>
@@ -285,8 +285,8 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>520</y>
-     <width>220</width>
+     <y>540</y>
+     <width>280</width>
      <height>21</height>
     </rect>
    </property>
@@ -304,7 +304,7 @@
    </property>
    <property name="maximumSize">
     <size>
-     <width>240</width>
+     <width>280</width>
      <height>21</height>
     </size>
    </property>
@@ -317,12 +317,12 @@
     <rect>
      <x>10</x>
      <y>360</y>
-     <width>691</width>
-     <height>151</height>
+     <width>721</width>
+     <height>181</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab1">
     <attribute name="title">
@@ -331,44 +331,44 @@
     <widget class="QTextEdit" name="sendTextEdit">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>0</x>
        <y>10</y>
-       <width>561</width>
-       <height>111</height>
+       <width>631</width>
+       <height>141</height>
       </rect>
      </property>
      <property name="tabStopWidth">
       <number>80</number>
      </property>
      <property name="cursorWidth">
-      <number>5</number>
+      <number>1</number>
      </property>
     </widget>
-    <widget class="QPushButton" name="sendButton">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>590</x>
-       <y>70</y>
-       <width>81</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>发送</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="clearButtonSend">
-     <property name="geometry">
-      <rect>
-       <x>590</x>
+       <x>640</x>
        <y>10</y>
-       <width>81</width>
-       <height>31</height>
+       <width>71</width>
+       <height>141</height>
       </rect>
      </property>
-     <property name="text">
-      <string>清除发送</string>
-     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="clearButtonSend">
+        <property name="text">
+         <string>清除发送</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="sendButton">
+        <property name="text">
+         <string>发送</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
    <widget class="QWidget" name="tab2">
@@ -380,8 +380,8 @@
       <rect>
        <x>10</x>
        <y>11</y>
-       <width>591</width>
-       <height>112</height>
+       <width>611</width>
+       <height>135</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
@@ -566,10 +566,10 @@
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>610</x>
+       <x>630</x>
        <y>20</y>
-       <width>77</width>
-       <height>91</height>
+       <width>81</width>
+       <height>121</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -594,9 +594,9 @@
   <widget class="QLabel" name="timeLabel">
    <property name="geometry">
     <rect>
-     <x>541</x>
-     <y>520</y>
-     <width>150</width>
+     <x>520</x>
+     <y>540</y>
+     <width>191</width>
      <height>21</height>
     </rect>
    </property>
@@ -608,8 +608,8 @@
    </property>
    <property name="maximumSize">
     <size>
-     <width>200</width>
-     <height>21</height>
+     <width>280</width>
+     <height>20</height>
     </size>
    </property>
    <property name="text">

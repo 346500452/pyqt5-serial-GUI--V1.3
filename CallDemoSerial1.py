@@ -289,7 +289,7 @@ class mainWindow(QMainWindow, Ui_Form):
             if num > 0:
                 bytes = self.ser.read(self.ser.inWaiting())
                 #根据实际接收的串口缓冲区数据长度，重新赋值，因为长度信息可能发生了更新
-				num = len(bytes)
+                num = len(bytes)
                 #十六进制显示
                 if self.hexShowCheckBox.checkState():
                     showData = ''
