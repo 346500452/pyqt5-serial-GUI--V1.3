@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 
 from PyQt5.QtCore import *
@@ -11,8 +12,6 @@ import serial
 import serial.tools.list_ports
 
 from demoSerial1 import Ui_Form
-
- 
 
 class mainWindow(QMainWindow, Ui_Form):
     ser = serial.Serial()
@@ -114,11 +113,13 @@ class mainWindow(QMainWindow, Ui_Form):
     def serialOpen(self):
         try:
             self.ser.port = self.serialCOMComboBox.currentText()
-            self.ser.baudRate = self.serialBaudRateComboBox.currentText()
-            self.ser.dataBits = self.serialDataBitComboBox.currentText()
+            self.ser.baudrate = int(self.serialBaudRateComboBox.currentText())
+            self.ser.bytesize = int(self.serialDataBitComboBox.currentText())
             parityValue = self.serialParityComboBox.currentText()
             self.ser.parity = parityValue[0]
-            self.ser.stopBits = int(self.serialStopBitComboBox.currentText())
+            self.ser.stopbits = int(self.serialStopBitComboBox.currentText())
+            self.ser.timeout = 0.2
+            self.ser.interCharTimeout = 0.001
             
             self.ser.open()
             #定时器开启，2ms
@@ -298,7 +299,7 @@ class mainWindow(QMainWindow, Ui_Form):
                 else:
                     showData = ''
                     try:
-                        showData = bytes.decode('utf-8')
+                        showData = bytes.decode('iso-8859-1')
                         #print(showData)
                     except:
                         print("编码出错")

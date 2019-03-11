@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['CallDemoSerial1.py'],
-             pathex=['E:\\study\\Computer\\QT\\owner\\demo3-定时器接收数据方式'],
+             pathex=['F:\\coding\\QT\\owner\\pyqt5-serial-GUI--V1.3'],
              binaries=[],
              datas=[],
              hiddenimports=[],

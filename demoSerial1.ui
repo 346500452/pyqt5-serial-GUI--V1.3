@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>737</width>
-    <height>567</height>
+    <width>858</width>
+    <height>683</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,10 +19,10 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>20</y>
+     <x>10</x>
+     <y>10</y>
      <width>221</width>
-     <height>331</height>
+     <height>381</height>
     </rect>
    </property>
    <property name="title">
@@ -235,7 +235,7 @@
     <item row="8" column="2">
      <widget class="QLineEdit" name="timingLineEdit">
       <property name="text">
-       <string>1000</string>
+       <string>100</string>
       </property>
      </widget>
     </item>
@@ -258,10 +258,10 @@
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>491</width>
-     <height>331</height>
+     <x>240</x>
+     <y>10</y>
+     <width>611</width>
+     <height>381</height>
     </rect>
    </property>
    <property name="title">
@@ -272,8 +272,8 @@
      <rect>
       <x>10</x>
       <y>20</y>
-      <width>471</width>
-      <height>301</height>
+      <width>591</width>
+      <height>351</height>
      </rect>
     </property>
     <property name="readOnly">
@@ -281,48 +281,17 @@
     </property>
    </widget>
   </widget>
-  <widget class="QLabel" name="cntLabel">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>540</y>
-     <width>280</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>220</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>280</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="text">
-    <string>发送：65535 字节，接收：65536 字节</string>
-   </property>
-  </widget>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>360</y>
-     <width>721</width>
-     <height>181</height>
+     <y>400</y>
+     <width>841</width>
+     <height>231</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab1">
     <attribute name="title">
@@ -333,8 +302,8 @@
       <rect>
        <x>0</x>
        <y>10</y>
-       <width>631</width>
-       <height>141</height>
+       <width>831</width>
+       <height>151</height>
       </rect>
      </property>
      <property name="tabStopWidth">
@@ -347,19 +316,32 @@
     <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>640</x>
-       <y>10</y>
-       <width>71</width>
-       <height>141</height>
+       <x>620</x>
+       <y>170</y>
+       <width>211</width>
+       <height>30</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QPushButton" name="clearButtonSend">
         <property name="text">
          <string>清除发送</string>
         </property>
        </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
        <widget class="QPushButton" name="sendButton">
@@ -380,8 +362,8 @@
       <rect>
        <x>10</x>
        <y>11</y>
-       <width>611</width>
-       <height>135</height>
+       <width>821</width>
+       <height>151</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
@@ -398,7 +380,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>30</width>
+          <width>50</width>
           <height>30</height>
          </size>
         </property>
@@ -423,7 +405,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>30</width>
+          <width>50</width>
           <height>30</height>
          </size>
         </property>
@@ -448,7 +430,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>30</width>
+          <width>50</width>
           <height>30</height>
          </size>
         </property>
@@ -467,7 +449,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>30</width>
+          <width>50</width>
           <height>30</height>
          </size>
         </property>
@@ -486,7 +468,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>30</width>
+          <width>50</width>
           <height>30</height>
          </size>
         </property>
@@ -508,7 +490,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>30</width>
+          <width>50</width>
           <height>30</height>
          </size>
         </property>
@@ -533,7 +515,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>30</width>
+          <width>50</width>
           <height>30</height>
          </size>
         </property>
@@ -552,7 +534,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>30</width>
+          <width>50</width>
           <height>30</height>
          </size>
         </property>
@@ -563,22 +545,35 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>630</x>
-       <y>20</y>
-       <width>81</width>
-       <height>121</height>
+       <x>629</x>
+       <y>170</y>
+       <width>201</width>
+       <height>30</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QPushButton" name="importButton">
         <property name="text">
          <string>导入条目</string>
         </property>
        </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
        <widget class="QPushButton" name="outportButton">
@@ -591,30 +586,74 @@
     </widget>
    </widget>
   </widget>
-  <widget class="QLabel" name="timeLabel">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>540</y>
-     <width>191</width>
-     <height>21</height>
+     <x>10</x>
+     <y>640</y>
+     <width>831</width>
+     <height>23</height>
     </rect>
    </property>
-   <property name="minimumSize">
-    <size>
-     <width>150</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>280</width>
-     <height>20</height>
-    </size>
-   </property>
-   <property name="text">
-    <string>time:</string>
-   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="timeLabel">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>280</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>time:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="cntLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>220</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>280</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>发送：65535 字节，接收：65536 字节</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <tabstops>
